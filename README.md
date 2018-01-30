@@ -139,10 +139,10 @@ Collection object shown with defaults:
   // element to target for @mentions
   iframe: null,
 
-  // class added in the flyout menu for active item
+  // style class added in the flyout menu for the active item
   selectClass: 'highlight',
 
-  // function called on select that returns the content to insert
+  // function called when user makes a menu selection; returns the content to insert
   selectTemplate: function (item) {
     return '@' + item.original.value;
   },
@@ -253,7 +253,7 @@ document.getElementById('myElement').addEventListener('tribute-no-match', functi
 Some useful approaches to common roadblocks when implementing @mentions.
 
 ### Updating a collection with new data
-You can update an instance of Tribute on the fly. If you have new data you want to insert into the current active collection you can access the collection values array directly:
+You can update an instance of Tribute *on the fly*. If you have new data you want to insert into the current active collection you can access the collection values array directly:
 
 ```js
 tribute.appendCurrent([
@@ -326,7 +326,7 @@ Sometimes you may need to have the Tribute menu attach to a scrollable parent el
 ```
 
 ### Loading remote data
-If your data set is large or would like to pre filter your data you can load dynamically by setting the `values` to a function.
+If your data set is large or would like to pre filter your data, you can load dynamically by setting the `values` to a function.
 
 ```js
 {
